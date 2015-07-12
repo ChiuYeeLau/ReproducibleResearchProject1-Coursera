@@ -136,6 +136,7 @@ plot_step_interval</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li>Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated. For example, you could use the mean/median for that day, or the mean for that 5-minute interval, etc.</li>
 </ol>
+<p><em>Use the mean/median for that day to replace the missing values in the dataset.</em></p>
 <pre class="r"><code>imputed_data = data
 imputed_data[is.na (imputed_data$steps), 'steps'] = ceiling (tapply (X = data$steps, INDEX = data$interval, FUN = mean, na.rm = TRUE))</code></pre>
 <ol start="3" style="list-style-type: decimal">

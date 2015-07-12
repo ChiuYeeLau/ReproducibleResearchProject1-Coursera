@@ -92,6 +92,8 @@ sum (is.na (data$steps))
 
 2. Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated. For example, you could use the mean/median for that day, or the mean for that 5-minute interval, etc.
 
+*Use the mean/median for that day to replace the missing values in the dataset.*
+
 ```{r, echo = TRUE}
 imputed_data = data
 imputed_data[is.na (imputed_data$steps), 'steps'] = ceiling (tapply (X = data$steps, INDEX = data$interval, FUN = mean, na.rm = TRUE))
