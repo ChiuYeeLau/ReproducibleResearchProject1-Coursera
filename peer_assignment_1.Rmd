@@ -1,6 +1,6 @@
 ---
 title: 'Reproducible Research of "Data Science Specialization": Peer Assessment 1'
-output: pdf_document
+output: html_document
 ---
 
 ### Loading and preprocessing the data ###
